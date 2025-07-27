@@ -1,953 +1,1056 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menggokil Cafe</title>
+<!DOCTYPE html> 
+ <html lang="id"> 
+ <head> 
+ 	<meta charset="UTF-8"> 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 	<title>Menggokil Cafe</title> 
 
-    <link rel="icon" href="https://i.ibb.co/svZZFnC4/a-60e7d1e41b76eee0399e64f721b14a32.gif" type="image/gif">
-    
-    <meta property="og:title" content="Menggokil Cafe Discord Server">
-    <meta property="og:description" content="Selamat datang di Menggokil Cafe! Tempat nongkrong online paling asik untuk para gamer, kreator, dan siapa saja yang butuh teman ngobrol.">
-    <meta property="og:image" content="https://i.ibb.co/svZZFnC4/a-60e7d1e41b76eee0399e64f721b14a32.gif">
-    <meta name="theme-color" content="#DC743C">
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Oswald -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 	<link rel="icon" href="https://i.ibb.co/svZZFnC4/a-60e7d1e41b76eee0399e64f721b14a32.gif" type="image/gif"> 
+ 	
+ 	<meta property="og:title" content="Menggokil Cafe Discord Server"> 
+ 	<meta property="og:description" content="Selamat datang di Menggokil Cafe! Tempat nongkrong online paling asik untuk para gamer, kreator, dan siapa saja yang butuh teman ngobrol."> 
+ 	<meta property="og:image" content="https://i.ibb.co/svZZFnC4/a-60e7d1e41b76eee0399e64f721b14a32.gif"> 
+ 	<meta name="theme-color" content="#DC743C"> 
+ 	<!-- Tailwind CSS for styling --> 
+ 	<script src="https://cdn.tailwindcss.com"></script> 
+ 	
+ 	<!-- Google Fonts: Oswald --> 
+ 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+ 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+ 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet"> 
+ 	
+ 	<!-- Font Awesome for icons --> 
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
 
-    <!-- Discord Widget Script (HTML Embed) -->
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+ 	<!-- Discord Widget Script (HTML Embed) --> 
+ 	<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script> 
 
-    <style>
-        /* Custom CSS for base styling and special effects */
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Oswald', sans-serif;
-            background-color: #111827; /* bg-gray-900 as fallback */
-            color: #F9FAFB; /* bg-gray-50 */
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            cursor: none; /* Hide the default cursor */
-        }
+ 	<style> 
+ 		/* Custom CSS for base styling and special effects */ 
+ 		html { 
+ 			scroll-behavior: smooth; 
+ 		} 
+ 		body { 
+ 			font-family: 'Oswald', sans-serif; 
+ 			background-color: #111827; /* bg-gray-900 as fallback */ 
+ 			color: #F9FAFB; /* bg-gray-50 */ 
+ 			overflow-x: hidden; /* Prevent horizontal scroll */ 
+ 			cursor: none; /* Hide the default cursor */ 
+ 		} 
 
-        /* Custom Cursor Styling */
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #DC743C; 
-        }
+ 		/* Custom Cursor Styling */ 
+ 		.cursor-dot { 
+ 			width: 8px; 
+ 			height: 8px; 
+ 			background-color: #DC743C;  
+ 		} 
 
-        .cursor-outline {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #DC743C;
-        }
-        
-        .cursor-dot,
-        .cursor-outline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            z-index: 9999;
-            pointer-events: none;
-            transition: transform 0.2s, background-color 0.2s, opacity 0.2s;
-            transition-timing-function: ease-out;
-        }
-        
-        /* Cursor hover effect */
-        .cursor-hover {
-            transform: translate(-50%, -50%) scale(1.5);
-            background-color: rgba(220, 116, 60, 0.5);
-        }
+ 		.cursor-outline { 
+ 			width: 40px; 
+ 			height: 40px; 
+ 			border: 2px solid #DC743C; 
+ 		} 
+ 		
+ 		.cursor-dot, 
+ 		.cursor-outline { 
+ 			position: fixed; 
+ 			top: 0; 
+ 			left: 0; 
+ 			transform: translate(-50%, -50%); 
+ 			border-radius: 50%; 
+ 			z-index: 9999; 
+ 			pointer-events: none; 
+ 			transition: transform 0.2s, background-color 0.2s, opacity 0.2s; 
+ 			transition-timing-function: ease-out; 
+ 		} 
+ 		
+ 		/* Cursor hover effect */ 
+ 		.cursor-hover { 
+ 			transform: translate(-50%, -50%) scale(1.5); 
+ 			background-color: rgba(220, 116, 60, 0.5); 
+ 		} 
 
-        /* Preloader Styling */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #111827;
-            z-index: 10000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-        
-        #preloader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
+ 		/* Preloader Styling */ 
+ 		#preloader { 
+ 			position: fixed; 
+ 			top: 0; 
+ 			left: 0; 
+ 			width: 100%; 
+ 			height: 100%; 
+ 			background-color: #111827; 
+ 			z-index: 10000; 
+ 			display: flex; 
+ 			justify-content: center; 
+ 			align-items: center; 
+ 			transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+ 		} 
+ 		
+ 		#preloader.hidden { 
+ 			opacity: 0; 
+ 			visibility: hidden; 
+ 		} 
 
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
+ 		@keyframes pulse { 
+ 			0%, 100% { 
+ 				opacity: 1; 
+ 				transform: scale(1); 
+ 			} 
+ 			50% { 
+ 				opacity: 0.7; 
+ 				transform: scale(1.05); 
+ 			} 
+ 		} 
+ 		
+ 		.preloader-text { 
+ 			font-size: 2.5rem; 
+ 			font-weight: 700; 
+ 			color: #DC743C; 
+ 			animation: pulse 2s infinite; 
+ 		} 
+ 		
+ 		/* Page container to switch between views */ 
+ 		.page-container { 
+ 			display: none; 
+ 		} 
+ 		.page-container.active { 
+ 			display: block; 
+ 		} 
+
+ 		.section { 
+ 			width: 100vw; 
+ 			min-height: 100vh; 
+ 			padding: 8rem 2rem 4rem 2rem; 
+ 			display: flex; 
+ 			flex-direction: column; 
+ 			justify-content: center; 
+ 			align-items: center; 
+ 			position: relative; 
+ 			background-size: cover; 
+ 			background-position: center; 
+ 			background-attachment: fixed; /* Parallax effect */ 
+ 			z-index: 1; 
+ 		} 
+ 		
+ 		/* Overlay for text readability */ 
+ 		.section::before { 
+ 			content: ''; 
+ 			position: absolute; 
+ 			top: 0; 
+ 			left: 0; 
+ 			width: 100%; 
+ 			height: 100%; 
+ 			background-color: rgba(17, 24, 39, 0.85); /* bg-gray-900 with 85% opacity */ 
+ 			z-index: -1; 
+ 		} 
+
+ 		/* --- Section Specific Backgrounds --- */ 
+ 		#beranda { background-image: url('https://cdn.discordapp.com/attachments/1393070201758552095/1399026669108465745/453a1cb8-fe91-4b28-a986-02c3d8353a6f.png?ex=6887809e&is=68862f1e&hm=991e69cdc41000d98c9e0e82aacb4bab1537798121192cd1f1b5277a7b543d96&'); } 
+ 		#about { background-image: url('https://cdn.discordapp.com/attachments/1393070201758552095/1399026669108465745/453a1cb8-fe91-4b28-a986-02c3d8353a6f.png?ex=6887809e&is=68862f1e&hm=991e69cdc41000d98c9e0e82aacb4bab1537798121192cd1f1b5277a7b543d96&'); } 
+ 		#events { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); } 
+ 		#list-staff { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); } 
+ 		#features { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); } 
+ 		#sponsorship { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); } 
+ 		#chat { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); } 
+
+ 		
+ 		/* Custom scrollbar */ 
+ 		body::-webkit-scrollbar { 
+ 			width: 8px; 
+ 		} 
+ 		body::-webkit-scrollbar-track { 
+ 			background: #1f2937; /* bg-gray-800 */ 
+ 		} 
+ 		body::-webkit-scrollbar-thumb { 
+ 			background: #DC743C; 
+ 			border-radius: 4px; 
+ 		} 
+
+ 		/* Reveal on Scroll Animation */ 
+ 		.reveal { 
+ 			opacity: 0; 
+ 			transform: translateY(30px); 
+ 			transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+ 		} 
+ 		.reveal.visible { 
+ 			opacity: 1; 
+ 			transform: translateY(0); 
+ 		} 
+
+ 		/* Back to Top Button */ 
+ 		#back-to-top { 
+ 			position: fixed; 
+ 			bottom: 30px; 
+ 			right: 30px; 
+ 			width: 50px; 
+ 			height: 50px; 
+ 			background-color: #DC743C; 
+ 			color: white; 
+ 			border-radius: 50%; 
+ 			display: none; /* Hidden by default */ 
+ 			justify-content: center; 
+ 			align-items: center; 
+ 			font-size: 20px; 
+ 			z-index: 100; 
+ 			transition: opacity 0.3s, transform 0.3s; 
+ 			transform: translateY(100px); 
+ 		} 
+ 		#back-to-top.show { 
+ 			display: flex; 
+ 			transform: translateY(0); 
+ 		} 
+
+ 		/* New Skewed Button Styling */ 
+ 		.skew-btn { 
+ 			transform: skewX(-20deg); 
+ 			background-color: #374151; /* bg-gray-700 */ 
+ 			transition: background-color 0.2s; 
+ 		} 
+ 		.skew-btn:hover { 
+ 			 background-color: #DC743C; 
+ 		} 
+ 		.skew-btn.active { 
+ 			 background-color: #DC743C; 
+ 		} 
+ 		.skew-btn > span { 
+ 			display: inline-block; 
+ 			transform: skewX(20deg); 
+ 		} 
+ 		.dropdown-menu { 
+ 			 background-color: #1f2937; /* bg-gray-800 */ 
+ 			 padding: 0.5rem; 
+ 		} 
+ 		.dropdown-menu a { 
+ 			transform: skewX(-20deg); 
+ 			background-color: #4b5563; /* bg-gray-600 */ 
+ 			margin: 0.25rem 0; 
+ 			padding: 0.5rem 1rem; 
+ 			display: block; 
+ 			color: white; 
+ 			transition: background-color 0.2s; 
+ 		} 
+ 		 .dropdown-menu a:hover, .dropdown-menu a.active { 
+ 			background-color: #DC743C; 
+ 			color: white; 
+ 		} 
+ 		.dropdown-menu a > span { 
+ 			display: inline-block; 
+ 			transform: skewX(20deg); 
+ 		} 
+
+ 		/* Aesthetic Text Styling */ 
+ 		h1, h2, h3, #title-link div, .preloader-text { 
+ 			 text-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+ 		} 
+ 		
+ 		/* Typing effect cursor */ 
+ 		#typing-text::after { 
+ 			content: '|'; 
+ 			display: inline-block; 
+ 			animation: blink-cursor 1s infinite; 
+ 			margin-left: 0.2rem; 
+ 			color: #DC743C; 
+ 		} 
+
+ 		@keyframes blink-cursor { 
+ 			0% { opacity: 1; } 
+ 			50% { opacity: 0; } 
+ 			100% { opacity: 1; } 
+ 		} 
+
+ 		/* Footer Styling */ 
+ 		.page-footer { 
+ 			position: relative; 
+ 			background-size: cover; 
+ 			background-position: center; 
+ 			background-attachment: fixed; 
+ 			z-index: 1; 
+ 		} 
+ 		.page-footer::before { 
+ 			content: ''; 
+ 			position: absolute; 
+ 			top: 0; 
+ 			left: 0; 
+ 			width: 100%; 
+ 			height: 100%; 
+ 			background-color: rgba(17, 24, 39, 0.9); /* Darker overlay for footer */ 
+ 			z-index: -1; 
+ 		} 
+
+ 		/* --- Footer Specific Backgrounds --- */ 
+ 		#footer-main { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+ 		#footer-events { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+ 		#footer-staff { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+ 		#footer-features { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+ 		#footer-sponsorship { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+ 		#footer-chat { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); } 
+
+        /* --- Responsive Design for Mobile (max-width: 768px) --- */
+        @media (max-width: 768px) {
+            /* Hide custom cursor on mobile as it's not user-friendly on touch devices */
+            .cursor-dot, .cursor-outline {
+                display: none;
             }
-            50% {
-                opacity: 0.7;
-                transform: scale(1.05);
-            }
-        }
-        
-        .preloader-text {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #DC743C;
-            animation: pulse 2s infinite;
-        }
-        
-        /* Page container to switch between views */
-        .page-container {
-            display: none;
-        }
-        .page-container.active {
-            display: block;
-        }
-
-        .section {
-            width: 100vw;
-            min-height: 100vh;
-            padding: 8rem 2rem 4rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax effect */
-            z-index: 1;
-        }
-        
-        /* Overlay for text readability */
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(17, 24, 39, 0.85); /* bg-gray-900 with 85% opacity */
-            z-index: -1;
-        }
-
-        /* --- Section Specific Backgrounds --- */
-        #beranda { background-image: url('https://cdn.discordapp.com/attachments/1393070201758552095/1399026669108465745/453a1cb8-fe91-4b28-a986-02c3d8353a6f.png?ex=6887809e&is=68862f1e&hm=991e69cdc41000d98c9e0e82aacb4bab1537798121192cd1f1b5277a7b543d96&'); }
-        #about { background-image: url('https://cdn.discordapp.com/attachments/1393070201758552095/1399026669108465745/453a1cb8-fe91-4b28-a986-02c3d8353a6f.png?ex=6887809e&is=68862f1e&hm=991e69cdc41000d98c9e0e82aacb4bab1537798121192cd1f1b5277a7b543d96&'); }
-        #events { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); }
-        #list-staff { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); }
-        #features { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); }
-        #sponsorship { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); }
-        #chat { background-image: url('https://cdn.discordapp.com/attachments/1394716497355604239/1394747486429778071/bannermcwelcome.png?ex=68871891&is=6885c711&hm=9ba256e945ea342361671654f69cac140f0ff73369b2fbdb79c820089d31f94d&'); }
-
-        
-        /* Custom scrollbar */
-        body::-webkit-scrollbar {
-            width: 8px;
-        }
-        body::-webkit-scrollbar-track {
-            background: #1f2937; /* bg-gray-800 */
-        }
-        body::-webkit-scrollbar-thumb {
-            background: #DC743C;
-            border-radius: 4px;
-        }
-
-        /* Reveal on Scroll Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Back to Top Button */
-        #back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: #DC743C;
-            color: white;
-            border-radius: 50%;
-            display: none; /* Hidden by default */
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            z-index: 100;
-            transition: opacity 0.3s, transform 0.3s;
-            transform: translateY(100px);
-        }
-        #back-to-top.show {
-            display: flex;
-            transform: translateY(0);
-        }
-
-        /* New Skewed Button Styling */
-        .skew-btn {
-            transform: skewX(-20deg);
-            background-color: #374151; /* bg-gray-700 */
-            transition: background-color 0.2s;
-        }
-        .skew-btn:hover {
-             background-color: #DC743C;
-        }
-        .skew-btn.active {
-             background-color: #DC743C;
-        }
-        .skew-btn > span {
-            display: inline-block;
-            transform: skewX(20deg);
-        }
-        .dropdown-menu {
-             background-color: #1f2937; /* bg-gray-800 */
-             padding: 0.5rem;
-        }
-        .dropdown-menu a {
-            transform: skewX(-20deg);
-            background-color: #4b5563; /* bg-gray-600 */
-            margin: 0.25rem 0;
-            padding: 0.5rem 1rem;
-            display: block;
-            color: white;
-            transition: background-color 0.2s;
-        }
-         .dropdown-menu a:hover, .dropdown-menu a.active {
-            background-color: #DC743C;
-            color: white;
-        }
-        .dropdown-menu a > span {
-            display: inline-block;
-            transform: skewX(20deg);
-        }
-
-        /* Aesthetic Text Styling */
-        h1, h2, h3, #title-link div, .preloader-text {
-             text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
-        
-        /* Typing effect cursor */
-        #typing-text::after {
-            content: '|';
-            display: inline-block;
-            animation: blink-cursor 1s infinite;
-            margin-left: 0.2rem;
-            color: #DC743C;
-        }
-
-        @keyframes blink-cursor {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* Footer Styling */
-        .page-footer {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            z-index: 1;
-        }
-        .page-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(17, 24, 39, 0.9); /* Darker overlay for footer */
-            z-index: -1;
-        }
-
-        /* --- Footer Specific Backgrounds --- */
-        #footer-main { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-        #footer-events { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-        #footer-staff { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-        #footer-features { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-        #footer-sponsorship { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-        #footer-chat { background-image: url('https://images.unsplash.com/photo-1579546929662-711aa81148e9?q=80&w=2070&auto=format&fit=crop'); }
-
-    </style>
-</head>
-<body class="text-gray-50">
-
-    <!-- Custom Cursor Elements -->
-    <div class="cursor-outline"></div>
-    <div class="cursor-dot"></div>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-text">Menggokil Cafe</div>
-    </div>
-
-    <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 w-full z-50 p-4 flex justify-center items-center gap-x-10 bg-transparent backdrop-blur-sm">
-        <!-- Left Group -->
-        <div class="flex items-center gap-x-4">
-            <button id="home-btn" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md">
-                <span class="flex items-center">Home</span>
-            </button>
-            <nav class="relative">
-                <button id="nav-toggle-info" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md">
-                    <span class="flex items-center">
-                        Info
-                        <i class="fas fa-chevron-down ml-2 transition-transform"></i>
-                    </span>
-                </button>
-                <div id="nav-menu-info" class="dropdown-menu absolute left-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-left">
-                    <a href="#" data-target="page-container-events" class="page-link rounded-md">
-                        <span class="flex items-center"><i class="fas fa-calendar-check w-4 mr-2"></i>Events</span>
-                    </a>
-                    <a href="#" data-target="page-container-staff" class="page-link rounded-md">
-                        <span class="flex items-center"><i class="fas fa-users-cog w-4 mr-2"></i>List Staff</span>
-                    </a>
-                    <a href="#" data-target="page-container-features" class="page-link rounded-md">
-                        <span class="flex items-center"><i class="fas fa-star w-4 mr-2"></i>List Fitur</span>
-                    </a>
-                     <a href="#" data-target="page-container-sponsorship" class="page-link rounded-md">
-                        <span class="flex items-center"><i class="fas fa-handshake-angle w-4 mr-2"></i>Sponsorship</span>
-                    </a>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Center Title -->
-        <div class="flex-shrink-0">
-            <div id="title-link" class="flex-shrink-0 text-center px-4 cursor-pointer">
-                 <div class="text-4xl font-bold text-[#DC743C]">
-                    <i class=""></i>Menggokil Cafe
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Group -->
-        <div class="flex items-center gap-x-4">
-            <nav class="relative">
-                <button id="nav-toggle-pages" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md">
-                    <span class="flex items-center">
-                        Pages
-                        <i class="fas fa-chevron-down ml-2 transition-transform"></i>
-                    </span>
-                </button>
-                <div id="nav-menu-pages" class="dropdown-menu absolute right-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-right">
-                    <a href="#" data-target="page-container-chat" class="page-link rounded-md">
-                         <span class="flex items-center"><i class="fas fa-comments w-4 mr-2"></i>Live Chat</span>
-                    </a>
-                </div>
-            </nav>
-            <nav class="relative">
-                <button id="nav-toggle-social" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md">
-                    <span class="flex items-center">
-                        Sosial
-                        <i class="fas fa-chevron-down ml-2 transition-transform"></i>
-                    </span>
-                </button>
-                <div id="nav-menu-social" class="dropdown-menu absolute right-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-right">
-                    <a href="https://discord.gg/menggokilcafe" target="_blank" class="rounded-md">
-                        <span class="flex items-center"><i class="fab fa-discord w-4 mr-2"></i>Discord</span>
-                    </a>
-                    <a href="https://www.instagram.com/menggokilcafe/" target="_blank" class="rounded-md">
-                        <span class="flex items-center"><i class="fab fa-instagram w-4 mr-2"></i>Instagram</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@menggokilcafe" target="_blank" class="rounded-md">
-                        <span class="flex items-center"><i class="fab fa-tiktok w-4 mr-2"></i>Tiktok</span>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content Wrapper -->
-    <main>
-        <!-- PAGE 1: Home -->
-        <div id="page-container-main" class="page-container active">
-            <!-- Section 1: Beranda -->
-            <section id="beranda" class="section relative">
-                <div class="text-center w-full max-w-4xl">
-                    <h1 class="text-5xl md:text-7xl font-black mb-4 leading-tight reveal">SELAMAT DATANG DI<br><span id="typing-text" class="text-[#DC743C]"></span></h1>
-                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto reveal" style="transition-delay: 0.2s;">Tempat nongkrong online paling asik yang membawa kamu ke suasana baru dan memiliki teman baru.</p>
-                    <a href="https://discord.gg/menggokilcafe " target="_blank" class="bg-[#DC743C] hover:bg-[#b96232] text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 inline-block reveal" style="transition-delay: 0.4s;">
-                        <i class="fab fa-discord mr-2"></i> Gabung Discord Menggokil Cafe
-                    </a>
-                    
-                </div>
-            </section>
-            <!-- Section 2: About Me -->
-            <section id="about" class="section">
-                <div class="container mx-auto max-w-5xl">
-                    <h2 class="text-4xl text-center font-bold mb-12 reveal">About Menggokil Cafe</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div class="reveal">
-                            <img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398666251546529893/a_60e7d1e41b76eee0399e64f721b14a32.gif?ex=688630f4&is=6884df74&hm=f206d2b47899b14dfe93a18956ee2aa8790067b80e1e34a1d7e956437ab727a0&" alt="Logo Server Menggokil Cafe" class="rounded-full shadow-lg mx-auto w-64 h-64 md:w-80 md:h-80 border-4 border-[#DC743C] object-cover">
-                        </div>
-                        <div class="text-left reveal" style="transition-delay: 0.2s;">
-                            <p class="text-lg text-gray-300 mb-4">
-                                <strong>Menggokil Cafe</strong>adalah server Discord Indonesia sejak April 2021 yang uniknya berasal dari live chat seorang YouTuber. Berawal dari candaan dan obrolan receh di kolom komentar, kini berkembang jadi komunitas hangat berisi orang-orang gokil, absurd, tapi selalu asik buat diajak ngobrol.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer id="footer-main" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-
-        <!-- PAGE 2: Events -->
-        <div id="page-container-events" class="page-container">
-            <section id="events" class="section">
-                 <div class="container mx-auto text-center max-w-5xl">
-                    <h2 class="text-4xl font-bold mb-12 reveal">List Event Menggokil Cafe</h2>
-                    <div class="space-y-16">
-                        <!-- Event 1 -->
-                        <div class="flex flex-col md:flex-row items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/868063532330156042/1397555249329209354/postermamamamongus.png?ex=68876c40&is=68861ac0&hm=7e49ace6942891f8e8c2febc078767027bc3c999cf72bd58e4aaaa766b335880&" alt="Event 1" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 4 BY AMONG US</h3>
-                                <p class="text-gray-300">Kita bakal main bareng Among Us bareng orang orangan Menggokil Cafe ☕, Siapin alibi mu, nyalain mic, dan siap-siap dituduh walau kamu bukan impostor awikwok.</p>
-                            </div>
-                        </div>
-                        <!-- Event 2 -->
-                         <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/868063532330156042/1370376708313583656/mamamDEADRAILS.png?ex=68876cc3&is=68861b43&hm=c68bde78e7861c9fed6cd8b86060e612b9d584402d1527b7011f1c5490bafb8f&" alt="Event 2" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 2 BY DEAD RAILS ROBLOX</h3>
-                                <p class="text-gray-300">MALEM GUYSS! Menggokil Cafe buka #MAMAM lagi part 2 main Dead Rails Roblox (max 10 org) dadakan hehe. jam 7:30 ready gaskan.</p>
-                            </div>
-                        </div>
-                        <!-- Event 3 -->
-                        <div class="flex flex-col md:flex-row items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/868063532330156042/1373041867259641926/mamawerewolf.png?ex=68873ba3&is=6885ea23&hm=ab23fa4ab87a188c33e9a0ddad82f4e005136ab294cf2e843f9ebf337543d20c&" alt="Event 3" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 3 BY WAREWOLF</h3>
-                                <p class="text-gray-300">HALO GUYS! Menggokil Cafe buka #MAMAM lagi part 3 dengan bermain Werewolf 🐺. Jangan lupa #MAMAM hari ini!.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer id="footer-events" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                 <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-
-        <!-- PAGE 3: List Staff -->
-        <div id="page-container-staff" class="page-container">
-             <section id="list-staff" class="section">
-                 <div class="container mx-auto text-center max-w-7xl">
-                    <h2 class="text-4xl font-bold mb-10 reveal">Kepengurusan Menggokil Cafe</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396392672649809972/IMG-20220619-WA0015.jpg?ex=68867d44&is=68852bc4&hm=58ad50f197a2f9557919d674b973320b62591e77f36671ede6526eb17c5da91f&" alt="Avatar Staf" class="w-36 h-36 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">SEAN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">OWNER</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396406341425303583/Proyek_Baru_2_0CCF723.png?ex=6885e13f&is=68848fbf&hm=fec44995ee050522f236df72ba60c6bd8e246fca6e320987e9cb012f4dad8385&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">RAFA</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">CO OWNER</div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.8s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396478117195026482/b1ce971b06682a54d61d1ca521d856d3_0.jpg?ex=6886ccd8&is=68857b58&hm=068511e4efd84706cc2c217a71caf4afc4971ca2b0d735c1f2d4427648a63d8e&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">ACEL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.2s;"><img src="https://cdn.discordapp.com/attachments/1392663002389544992/1398682968456822895/FB_IMG_17535423470008922.jpg?ex=68864085&is=6884ef05&hm=87b91f391d68abf3547dc6be2472cca51decde5e7702cf04744553fed1931185&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">GIAN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.3s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396471266050838578/IMG-20240109-WA0011.jpg?ex=68861db7&is=6884cc37&hm=577c5d3c1c8f69300516deffa6fb05606d0283da2c3db5fbcceb2316c49b8226&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">AQIL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.5s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1398707249119105046/Gambar_WhatsApp_2025-04-01_pukul_07.17.29_7993cf0d.jpg?ex=6886ffe2&is=6885ae62&hm=f5bac28ee3f8d8be1d03dc7f1eee13871070c6b8a6e0774613a057ffb0548eb0&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">CISEN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.4s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396389934369083555/1970-01-21-015508943.jpg?ex=6885d1f8&is=68848078&hm=40b54d318b82a5d15ee03b219f464826304f4d894343d54f1e79d06b51de7b87&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">SYABIL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SUPERVISOR</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.6s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1398703519250518138/IMG-20231002-WA0010.jpg?ex=6886fc69&is=6885aae9&hm=d6391bff9f4094fcb44ded8760680a681c5fecb46bbb84b8db6311e62ed5b89a&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">WILLIAMS</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.7s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1399022129470771282/adcafcd12d8318531d7e896fe6f2e5ef.png?ex=68877c64&is=68862ae4&hm=0f2382fbc07a098505001ce2d66fc7d82e8f16fdbf4244b864041fdc8d8f1e58&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">ACA</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.9s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396480957984280627/IMG_20250413_175341.jpg?ex=6886cf7d&is=68857dfd&hm=a95efe27238d1d953379dcd1074963557855445acf1c72c358f392cf2174caff&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">NILAM</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 1.0s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396491795327746109/IMG20250413092145.jpg?ex=6886d995&is=68858815&hm=7b9a85a4d2ce794586582f2eacc910846ae143f902d1becb3c465ee140b2e8ce&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">JASHOO</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div>
-                    </div>
-                </div>
-            </section>
-            <footer id="footer-staff" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                 <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-
-        <!-- PAGE 4: Features -->
-        <div id="page-container-features" class="page-container">
-            <section id="features" class="section">
-                 <div class="container mx-auto text-center max-w-5xl">
-                    <h2 class="text-4xl font-bold mb-12 reveal">Fitur Unggulan Menggokil Cafe</h2>
-                    <div class="space-y-16">
-                        <!-- Feature 1 -->
-                        <div class="flex flex-col md:flex-row items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398667226135134238/Screenshot_5.png?ex=688631dc&is=6884e05c&hm=e8a0b614590bebf2c88257e1890dfc35bec28c0a165e46c8fd01b51349cc510f&" alt="Fitur 1" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">Sistem Leveling dengan canvas</h3>
-                                <p class="text-gray-300">Naikkan level dengan aktif di server! Dan kalian akan melihat betapa menariknya sistem leveling dengan canvas yang keren.</p>
-                            </div>
-                        </div>
-                        <!-- Feature 2 -->
-                         <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398667736107978899/Screenshot_6.png?ex=68863256&is=6884e0d6&hm=55ccc7bc773e08cfd31934fbe30d8a72d27b2e486a4ebb0254e4dabaa52e89d5&" alt="Fitur 2" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">Bot Musik 24/7 Dan Bot Musik Official</h3>
-                                <p class="text-gray-300">Selain bot music umum di server discord, kalian akan menemukan bot music official kami yaitu KIZA, nikmati alunan mendengarkan music dengan nyaman dan aman.</p>
-                            </div>
-                        </div>
-                        <!-- Feature 3 -->
-                        <div class="flex flex-col md:flex-row items-center gap-8 reveal">
-                            <img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398668995640561684/image.png?ex=68863382&is=6884e202&hm=636500fb0bff752d25f9a35607d5b103b77f4e978c6e96bca828096e407add65&" alt="Fitur 3" class="w-full md:w-1/2 rounded-lg shadow-lg">
-                            <div class="md:w-1/2 text-left">
-                                <h3 class="text-2xl font-bold text-[#DC743C] mb-2">System Bot Ekonomi Mata Uang Menggokil Cafe</h3>
-                                <p class="text-gray-300">Nikmati bermain bot ekonomi memakai bot official dari server menggokil cafe, dan dapatkan mata uang menggokil cafe dengan sangat banyak, kalian bisa menggunakan mata uang menggokil cafe dengan membeli role dan lain lainnya.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-             <footer id="footer-features" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-
-        <!-- PAGE 5: Sponsorship -->
-        <div id="page-container-sponsorship" class="page-container">
-            <section id="sponsorship" class="section">
-                 <div class="container mx-auto text-center max-w-5xl">
-                    <h2 class="text-4xl font-bold mb-10 reveal">Daftar Sponsorship Menggokil Cafe</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 1" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">1</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP EVENTS</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 2" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">2</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP SERVER</div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.2s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 3" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">3</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP TOUR</p></div>
-                        <div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.3s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 4" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">4</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP STAFF</p></div>
-
-                    </div>
-                </div>
-            </section>
-             <footer id="footer-sponsorship" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-        
-        <!-- PAGE 6: CHAT WIDGET -->
-        <div id="page-container-chat" class="page-container">
-            <section id="chat" class="section">
-                <div class="container mx-auto text-center w-full h-full flex flex-col items-center justify-center">
-                    <h2 class="text-4xl font-bold mb-10 reveal">Live Chat Menggokil Cafe</h2>
-                    <div class="w-full max-w-4xl h-[70vh] rounded-lg overflow-hidden shadow-2xl reveal" style="transition-delay: 0.2s;">
-                        <widgetbot
-                            server="835883386656522281"
-                            channel="868259034392854579"
-                            width="100%"
-                            height="100%"
-                            css="::-webkit-scrollbar { display: none; } body { scrollbar-width: none; }"
-                        ></widgetbot>
-                    </div>
-                </div>
-            </section>
-             <footer id="footer-chat" class="page-footer w-full py-12 px-4 mt-auto">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
-                    <div class="md:col-span-1">
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3>
-                        <p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p>
-                        <div class="flex justify-center md:justify-start gap-4 mt-4">
-                            <a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a>
-                            <a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a>
-                            <a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div>
-                        <h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3>
-                        <ul class="space-y-2 text-sm">
-                            <li class="text-gray-400">Email</li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6">
-                    Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a>
-                </div>
-            </footer>
-        </div>
-    </main>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Kembali ke atas">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const preloader = document.getElementById('preloader');
-            
-            // --- Initial Page Load ---
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, 500);
-            });
-
-            // --- Custom Cursor Logic ---
-            const cursorDot = document.querySelector('.cursor-dot');
-            const cursorOutline = document.querySelector('.cursor-outline');
-            window.addEventListener('mousemove', e => {
-                const posX = e.clientX;
-                const posY = e.clientY;
-                cursorDot.style.left = `${posX}px`;
-                cursorDot.style.top = `${posY}px`;
-                cursorOutline.style.transform = `translate(${posX - 20}px, ${posY - 20}px)`;
-            });
-            const interactiveElements = document.querySelectorAll('a, button, img, #title-link');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseover', () => cursorOutline.classList.add('cursor-hover'));
-                el.addEventListener('mouseout', () => cursorOutline.classList.remove('cursor-hover'));
-            });
-
-            // --- Navigation Logic ---
-            const homeBtn = document.getElementById('home-btn');
-            const navToggleInfo = document.getElementById('nav-toggle-info');
-            const navMenuInfo = document.getElementById('nav-menu-info');
-            const navTogglePages = document.getElementById('nav-toggle-pages');
-            const navMenuPages = document.getElementById('nav-menu-pages');
-            const navToggleSocial = document.getElementById('nav-toggle-social');
-            const navMenuSocial = document.getElementById('nav-menu-social');
-            const titleLink = document.getElementById('title-link');
-
-            const pageLinks = document.querySelectorAll('.page-link');
-            const pageContainers = document.querySelectorAll('.page-container');
-            let observer;
-
-            function setupPageObserver(containerId) {
-                if (observer) {
-                    observer.disconnect();
-                }
-
-                const container = document.getElementById(containerId);
-                if (!container) return;
-
-                const sections = container.querySelectorAll('.section');
-                container.querySelectorAll('.reveal').forEach(el => el.classList.remove('visible'));
-
-                observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.querySelectorAll('.reveal').forEach(el => {
-                                el.classList.add('visible');
-                                const counters = el.querySelectorAll('[data-target]');
-                                counters.forEach(counter => {
-                                    if (counter.innerText === '0' || counter.dataset.isCounting !== 'true') {
-                                        counterUp(counter);
-                                    }
-                                });
-                            });
-                        }
-                    });
-                }, { threshold: 0.1 });
-
-                sections.forEach(section => observer.observe(section));
-
-                const firstSection = container.querySelector('.section');
-                if (firstSection) {
-                   setTimeout(() => {
-                       firstSection.querySelectorAll('.reveal').forEach(el => {
-                           el.classList.add('visible');
-                            const counters = el.querySelectorAll('[data-target]');
-                            counters.forEach(counter => {
-                                 if (counter.innerText === '0' || counter.dataset.isCounting !== 'true') {
-                                    counterUp(counter);
-                                }
-                            });
-                       });
-                   }, 100);
-                }
+            body {
+                cursor: auto; /* Show the default cursor on mobile */
             }
 
-            function switchToPage(targetId) {
-                const targetContainer = document.getElementById(targetId);
-
-                if (!targetContainer || targetContainer.classList.contains('active')) {
-                    return;
-                }
-                
-                preloader.classList.remove('hidden');
-
-                setTimeout(() => {
-                    pageContainers.forEach(pc => pc.classList.remove('active'));
-                    targetContainer.classList.add('active');
-
-                    // Manage active states for links in dropdowns
-                    pageLinks.forEach(l => l.classList.remove('active'));
-                    const activeLink = document.querySelector(`.page-link[data-target="${targetId}"]`);
-                    if(activeLink) {
-                        activeLink.classList.add('active');
-                    }
-                    
-                    // Handle body scroll for chat page
-                    if (targetId === 'page-container-chat') {
-                        document.body.style.overflowY = 'hidden';
-                    } else {
-                        document.body.style.overflowY = 'auto';
-                    }
-                    
-                    window.scrollTo(0,0);
-                    setupPageObserver(targetId);
-
-                    // Typing effect for home page
-                    const typingTarget = document.getElementById('typing-text');
-                    if (targetId === 'page-container-main' && typingTarget) {
-                         typeWriter(typingTarget, 'MENGGOKIL CAFE');
-                    }
-                    
-                    preloader.classList.add('hidden');
-                }, 800);
+            /* Header adjustments for smaller screens */
+            header {
+                flex-direction: column; /* Stack header items vertically */
+                gap-y: 1rem; /* Add vertical gap between items */
+                padding: 1rem;
+                background-color: rgba(17, 24, 39, 0.7); /* Add a slightly more solid background */
+                backdrop-filter: blur(8px); /* Increase blur for readability */
             }
             
-            homeBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchToPage('page-container-main');
-            });
-
-            // --- CLICK-BASED DROPDOWN LOGIC ---
-            function toggleDropdown(toggle, menu) {
-                const isHidden = menu.classList.contains('hidden');
-                // Close all menus first
-                navMenuInfo.classList.add('hidden');
-                navMenuPages.classList.add('hidden');
-                navMenuSocial.classList.add('hidden');
-                navToggleInfo.querySelector('i').classList.remove('rotate-180');
-                navTogglePages.querySelector('i').classList.remove('rotate-180');
-                navToggleSocial.querySelector('i').classList.remove('rotate-180');
-
-                // If the clicked menu was hidden, show it
-                if (isHidden) {
-                    menu.classList.remove('hidden');
-                    toggle.querySelector('i').classList.add('rotate-180');
-                }
+            /* Center the button groups */
+            header .flex.items-center {
+                justify-content: center;
+                flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+                gap: 0.5rem;
             }
 
-            navToggleInfo.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleDropdown(navToggleInfo, navMenuInfo);
-            });
-            
-            navTogglePages.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleDropdown(navTogglePages, navMenuPages);
-            });
+            #title-link {
+                order: -1; /* Move the main title to the top */
+                margin-bottom: 0.5rem;
+            }
+            #title-link div {
+                font-size: 1.75rem; /* Reduce title font size */
+            }
 
-            navToggleSocial.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleDropdown(navToggleSocial, navMenuSocial);
-            });
-            
-            pageLinks.forEach(link => {
-                link.addEventListener('click', e => {
-                    e.preventDefault();
-                    const targetId = link.dataset.target;
-                    switchToPage(targetId);
-                });
-            });
-
-            titleLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                switchToPage('page-container-main');
-            });
-
-            // Close dropdown when clicking anywhere else on the page
-            window.addEventListener('click', () => {
-                if (!navMenuInfo.classList.contains('hidden')) {
-                    toggleDropdown(navToggleInfo, navMenuInfo);
-                }
-                 if (!navMenuPages.classList.contains('hidden')) {
-                    toggleDropdown(navTogglePages, navMenuPages);
-                }
-                if (!navMenuSocial.classList.contains('hidden')) {
-                    toggleDropdown(navToggleSocial, navMenuSocial);
-                }
-            });
-
-
-            // --- Back to Top & Scroll Logic ---
-            const backToTopButton = document.getElementById('back-to-top');
-            
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('show');
-                } else {
-                    backToTopButton.classList.remove('show');
-                }
-            });
-
-            // --- Counter Up & Typing Animation ---
-            const counterUp = (el) => {
-                el.dataset.isCounting = 'true';
-                const target = parseInt(el.getAttribute('data-target'), 10);
-                if(isNaN(target)) return;
-                let current = 0;
-                const duration = 1500;
-                const stepTime = 20;
-                const totalSteps = duration / stepTime;
-                const increment = target / totalSteps;
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        el.innerText = Math.ceil(current);
-                        setTimeout(updateCounter, stepTime);
-                    } else {
-                        el.innerText = target;
-                        el.dataset.isCounting = 'false';
-                    }
-                };
-                updateCounter();
-            };
-
-            function typeWriter(element, text, speed = 150) {
-                let i = 0;
-                element.innerHTML = ''; // Clear previous text
-                element.dataset.typing = 'true'; // Set typing flag
-
-                function type() {
-                    if (i < text.length) {
-                        element.innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(type, speed);
-                    } else {
-                        element.dataset.typing = 'false'; // Unset flag
-                    }
-                }
-                type();
+            /* Adjust button and dropdown styles */
+            .skew-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem; /* Slightly smaller font for buttons */
+            }
+            .dropdown-menu {
+                /* Make dropdowns take up more screen width for easier tapping */
+                width: 90vw; 
+                max-width: 300px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
             }
             
-            // Initial setup
-            setupPageObserver('page-container-main');
-            const initialTypingTarget = document.getElementById('typing-text');
-            if(initialTypingTarget) {
-                typeWriter(initialTypingTarget, 'MENGGOKIL CAFE');
+            /* General section padding and typography adjustments */
+            .section {
+                padding: 6rem 1rem 4rem 1rem;
+                background-attachment: scroll; /* Disable fixed background on mobile for performance */
             }
-        });
-    </script>
-</body>
+
+            h1 { font-size: 2.5rem; } /* e.g., 40px */
+            h2 { font-size: 2rem; } /* e.g., 32px */
+            h3 { font-size: 1.5rem; } /* e.g., 24px */
+            p, .text-lg { font-size: 1rem; } /* e.g., 16px */
+            .preloader-text { font-size: 2rem; }
+
+            /* Specific section content adjustments */
+            #about .text-left { text-align: center; }
+            #about img {
+                width: 10rem; /* 160px */
+                height: 10rem; /* 160px */
+            }
+            
+            /* Staff & Sponsorship list adjustments */
+            #list-staff .grid, #sponsorship .grid {
+                grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+                gap: 1rem;
+            }
+            #list-staff .bg-gray-800\/80 { padding: 1rem; }
+            #list-staff img {
+                width: 5rem; /* 80px */
+                height: 5rem; /* 80px */
+            }
+            #list-staff h4 { font-size: 1rem; }
+            
+            /* Event & Feature list adjustments */
+            #events .text-left, #features .text-left {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            /* Chat widget adjustment for better mobile view */
+            #chat .w-full.max-w-4xl {
+                height: 75vh;
+            }
+            
+            /* Footer adjustments */
+            .page-footer {
+                background-attachment: scroll; /* Disable fixed background */
+            }
+            .page-footer .grid {
+                grid-template-columns: 1fr; /* Stack footer columns */
+                gap: 2rem;
+            }
+            .page-footer .flex.justify-center.md\:justify-start {
+                justify-content: center; /* Center social icons */
+            }
+        }
+ 	</style> 
+ </head> 
+ <body class="text-gray-50"> 
+
+ 	<!-- Custom Cursor Elements --> 
+ 	<div class="cursor-outline"></div> 
+ 	<div class="cursor-dot"></div> 
+
+ 	<!-- Preloader --> 
+ 	<div id="preloader"> 
+ 		<div class="preloader-text">Menggokil Cafe</div> 
+ 	</div> 
+
+ 	<!-- Header Navigation --> 
+ 	<header class="fixed top-0 left-0 w-full z-50 p-4 flex justify-center items-center gap-x-10 bg-transparent backdrop-blur-sm"> 
+ 		<!-- Left Group --> 
+ 		<div class="flex items-center gap-x-4"> 
+ 			<button id="home-btn" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md"> 
+ 				<span class="flex items-center">Home</span> 
+ 			</button> 
+ 			<nav class="relative"> 
+ 				<button id="nav-toggle-info" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md"> 
+ 					<span class="flex items-center"> 
+ 						Info 
+ 						<i class="fas fa-chevron-down ml-2 transition-transform"></i> 
+ 					</span> 
+ 				</button> 
+ 				<div id="nav-menu-info" class="dropdown-menu absolute left-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-left"> 
+ 					<a href="#" data-target="page-container-events" class="page-link rounded-md"> 
+ 						<span class="flex items-center"><i class="fas fa-calendar-check w-4 mr-2"></i>Events</span> 
+ 					</a> 
+ 					<a href="#" data-target="page-container-staff" class="page-link rounded-md"> 
+ 						<span class="flex items-center"><i class="fas fa-users-cog w-4 mr-2"></i>List Staff</span> 
+ 					</a> 
+ 					<a href="#" data-target="page-container-features" class="page-link rounded-md"> 
+ 						<span class="flex items-center"><i class="fas fa-star w-4 mr-2"></i>List Fitur</span> 
+ 					</a> 
+ 					 <a href="#" data-target="page-container-sponsorship" class="page-link rounded-md"> 
+ 						<span class="flex items-center"><i class="fas fa-handshake-angle w-4 mr-2"></i>Sponsorship</span> 
+ 					</a> 
+ 				</div> 
+ 			</nav> 
+ 		</div> 
+
+ 		<!-- Center Title --> 
+ 		<div class="flex-shrink-0"> 
+ 			<div id="title-link" class="flex-shrink-0 text-center px-4 cursor-pointer"> 
+ 				 <div class="text-4xl font-bold text-[#DC743C]"> 
+ 					<i class=""></i>Menggokil Cafe 
+ 				</div> 
+ 			</div> 
+ 		</div> 
+
+ 		<!-- Right Group --> 
+ 		<div class="flex items-center gap-x-4"> 
+ 			<nav class="relative"> 
+ 				<button id="nav-toggle-pages" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md"> 
+ 					<span class="flex items-center"> 
+ 						Pages 
+ 						<i class="fas fa-chevron-down ml-2 transition-transform"></i> 
+ 					</span> 
+ 				</button> 
+ 				<div id="nav-menu-pages" class="dropdown-menu absolute right-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-right"> 
+ 					<a href="#" data-target="page-container-chat" class="page-link rounded-md"> 
+ 						 <span class="flex items-center"><i class="fas fa-comments w-4 mr-2"></i>Live Chat</span> 
+ 					</a> 
+ 				</div> 
+ 			</nav> 
+ 			<nav class="relative"> 
+ 				<button id="nav-toggle-social" class="skew-btn text-lg font-semibold px-6 py-2 rounded-md"> 
+ 					<span class="flex items-center"> 
+ 						Sosial 
+ 						<i class="fas fa-chevron-down ml-2 transition-transform"></i> 
+ 					</span> 
+ 				</button> 
+ 				<div id="nav-menu-social" class="dropdown-menu absolute right-0 mt-2 w-56 rounded-lg shadow-xl hidden z-20 transition-all origin-top-right"> 
+ 					<a href="https://discord.gg/menggokilcafe" target="_blank" class="rounded-md"> 
+ 						<span class="flex items-center"><i class="fab fa-discord w-4 mr-2"></i>Discord</span> 
+ 					</a> 
+ 					<a href="https://www.instagram.com/menggokilcafe/" target="_blank" class="rounded-md"> 
+ 						<span class="flex items-center"><i class="fab fa-instagram w-4 mr-2"></i>Instagram</span> 
+ 					</a> 
+ 					<a href="https://www.tiktok.com/@menggokilcafe" target="_blank" class="rounded-md"> 
+ 						<span class="flex items-center"><i class="fab fa-tiktok w-4 mr-2"></i>Tiktok</span> 
+ 					</a> 
+ 				</div> 
+ 			</nav> 
+ 		</div> 
+ 	</header> 
+
+ 	<!-- Main Content Wrapper --> 
+ 	<main> 
+ 		<!-- PAGE 1: Home --> 
+ 		<div id="page-container-main" class="page-container active"> 
+ 			<!-- Section 1: Beranda --> 
+ 			<section id="beranda" class="section relative"> 
+ 				<div class="text-center w-full max-w-4xl"> 
+ 					<h1 class="text-5xl md:text-7xl font-black mb-4 leading-tight reveal">SELAMAT DATANG DI<br><span id="typing-text" class="text-[#DC743C]"></span></h1> 
+ 					<p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto reveal" style="transition-delay: 0.2s;">Tempat nongkrong online paling asik yang membawa kamu ke suasana baru dan memiliki teman baru.</p> 
+ 					<a href="https://discord.gg/menggokilcafe " target="_blank" class="bg-[#DC743C] hover:bg-[#b96232] text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 inline-block reveal" style="transition-delay: 0.4s;"> 
+ 						<i class="fab fa-discord mr-2"></i> Gabung Discord Menggokil Cafe 
+ 					</a> 
+ 					
+ 				</div> 
+ 			</section> 
+ 			<!-- Section 2: About Me --> 
+ 			<section id="about" class="section"> 
+ 				<div class="container mx-auto max-w-5xl"> 
+ 					<h2 class="text-4xl text-center font-bold mb-12 reveal">About Menggokil Cafe</h2> 
+ 					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"> 
+ 						<div class="reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398666251546529893/a_60e7d1e41b76eee0399e64f721b14a32.gif?ex=688630f4&is=6884df74&hm=f206d2b47899b14dfe93a18956ee2aa8790067b80e1e34a1d7e956437ab727a0&" alt="Logo Server Menggokil Cafe" class="rounded-full shadow-lg mx-auto w-64 h-64 md:w-80 md:h-80 border-4 border-[#DC743C] object-cover"> 
+ 						</div> 
+ 						<div class="text-left reveal" style="transition-delay: 0.2s;"> 
+ 							<p class="text-lg text-gray-300 mb-4"> 
+ 								<strong>Menggokil Cafe</strong>adalah server Discord Indonesia sejak April 2021 yang uniknya berasal dari live chat seorang YouTuber. Berawal dari candaan dan obrolan receh di kolom komentar, kini berkembang jadi komunitas hangat berisi orang-orang gokil, absurd, tapi selalu asik buat diajak ngobrol. 
+ 							</p> 
+ 						</div> 
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			<footer id="footer-main" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				<div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+
+ 		<!-- PAGE 2: Events --> 
+ 		<div id="page-container-events" class="page-container"> 
+ 			<section id="events" class="section"> 
+ 				 <div class="container mx-auto text-center max-w-5xl"> 
+ 					<h2 class="text-4xl font-bold mb-12 reveal">List Event Menggokil Cafe</h2> 
+ 					<div class="space-y-16"> 
+ 						<!-- Event 1 --> 
+ 						<div class="flex flex-col md:flex-row items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/868063532330156042/1397555249329209354/postermamamamongus.png?ex=68876c40&is=68861ac0&hm=7e49ace6942891f8e8c2febc078767027bc3c999cf72bd58e4aaaa766b335880&" alt="Event 1" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 4 BY AMONG US</h3> 
+ 								<p class="text-gray-300">Kita bakal main bareng Among Us bareng orang orangan Menggokil Cafe ☕, Siapin alibi mu, nyalain mic, dan siap-siap dituduh walau kamu bukan impostor awikwok.</p> 
+ 							</div> 
+ 						</div> 
+ 						<!-- Event 2 --> 
+ 						 <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/868063532330156042/1370376708313583656/mamamDEADRAILS.png?ex=68876cc3&is=68861b43&hm=c68bde78e7861c9fed6cd8b86060e612b9d584402d1527b7011f1c5490bafb8f&" alt="Event 2" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 2 BY DEAD RAILS ROBLOX</h3> 
+ 								<p class="text-gray-300">MALEM GUYSS! Menggokil Cafe buka #MAMAM lagi part 2 main Dead Rails Roblox (max 10 org) dadakan hehe. jam 7:30 ready gaskan.</p> 
+ 							</div> 
+ 						</div> 
+ 						<!-- Event 3 --> 
+ 						<div class="flex flex-col md:flex-row items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/868063532330156042/1373041867259641926/mamawerewolf.png?ex=68873ba3&is=6885ea23&hm=ab23fa4ab87a188c33e9a0ddad82f4e005136ab294cf2e843f9ebf337543d20c&" alt="Event 3" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">#MAMAM | MENGGOKIL AGENDA MAIN MALAM PART 3 BY WAREWOLF</h3> 
+ 								<p class="text-gray-300">HALO GUYS! Menggokil Cafe buka #MAMAM lagi part 3 dengan bermain Werewolf 🐺. Jangan lupa #MAMAM hari ini!.</p> 
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			<footer id="footer-events" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				 <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+
+ 		<!-- PAGE 3: List Staff --> 
+ 		<div id="page-container-staff" class="page-container"> 
+ 			 <section id="list-staff" class="section"> 
+ 				 <div class="container mx-auto text-center max-w-7xl"> 
+ 					<h2 class="text-4xl font-bold mb-10 reveal">Kepengurusan Menggokil Cafe</h2> 
+ 					<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8"> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396392672649809972/IMG-20220619-WA0015.jpg?ex=68867d44&is=68852bc4&hm=58ad50f197a2f9557919d674b973320b62591e77f36671ede6526eb17c5da91f&" alt="Avatar Staf" class="w-36 h-36 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">SEAN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">OWNER</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396406341425303583/Proyek_Baru_2_0CCF723.png?ex=6885e13f&is=68848fbf&hm=fec44995ee050522f236df72ba60c6bd8e246fca6e320987e9cb012f4dad8385&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">RAFA</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">CO OWNER</div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.8s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396478117195026482/b1ce971b06682a54d61d1ca521d856d3_0.jpg?ex=6886ccd8&is=68857b58&hm=068511e4efd84706cc2c217a71caf4afc4971ca2b0d735c1f2d4427648a63d8e&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">ACEL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.2s;"><img src="https://cdn.discordapp.com/attachments/1392663002389544992/1398682968456822895/FB_IMG_17535423470008922.jpg?ex=68864085&is=6884ef05&hm=87b91f391d68abf3547dc6be2472cca51decde5e7702cf04744553fed1931185&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">GIAN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.3s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396471266050838578/IMG-20240109-WA0011.jpg?ex=68861db7&is=6884cc37&hm=577c5d3c1c8f69300516deffa6fb05606d0283da2c3db5fbcceb2316c49b8226&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">AQIL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.5s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1398707249119105046/Gambar_WhatsApp_2025-04-01_pukul_07.17.29_7993cf0d.jpg?ex=6886ffe2&is=6885ae62&hm=f5bac28ee3f8d8be1d03dc7f1eee13871070c6b8a6e0774613a057ffb0548eb0&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">CISEN</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">GENERAL MANAGER</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.4s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396389934369083555/1970-01-21-015508943.jpg?ex=6885d1f8&is=68848078&hm=40b54d318b82a5d15ee03b219f464826304f4d894343d54f1e79d06b51de7b87&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">SYABIL</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SUPERVISOR</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.6s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1398703519250518138/IMG-20231002-WA0010.jpg?ex=6886fc69&is=6885aae9&hm=d6391bff9f4094fcb44ded8760680a681c5fecb46bbb84b8db6311e62ed5b89a&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">WILLIAMS</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.7s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1399022129470771282/adcafcd12d8318531d7e896fe6f2e5ef.png?ex=68877c64&is=68862ae4&hm=0f2382fbc07a098505001ce2d66fc7d82e8f16fdbf4244b864041fdc8d8f1e58&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">ACA</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.9s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396480957984280627/IMG_20250413_175341.jpg?ex=6886cf7d&is=68857dfd&hm=a95efe27238d1d953379dcd1074963557855445acf1c72c358f392cf2174caff&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">NILAM</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 1.0s;"><img src="https://cdn.discordapp.com/attachments/1396389789866922067/1396491795327746109/IMG20250413092145.jpg?ex=6886d995&is=68858815&hm=7b9a85a4d2ce794586582f2eacc910846ae143f902d1becb3c465ee140b2e8ce&" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">JASHOO</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">LINE COOK</p></div> 
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			<footer id="footer-staff" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				 <div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+
+ 		<!-- PAGE 4: Features --> 
+ 		<div id="page-container-features" class="page-container"> 
+ 			<section id="features" class="section"> 
+ 				 <div class="container mx-auto text-center max-w-5xl"> 
+ 					<h2 class="text-4xl font-bold mb-12 reveal">Fitur Unggulan Menggokil Cafe</h2> 
+ 					<div class="space-y-16"> 
+ 						<!-- Feature 1 --> 
+ 						<div class="flex flex-col md:flex-row items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398667226135134238/Screenshot_5.png?ex=688631dc&is=6884e05c&hm=e8a0b614590bebf2c88257e1890dfc35bec28c0a165e46c8fd01b51349cc510f&" alt="Fitur 1" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">Sistem Leveling dengan canvas</h3> 
+ 								<p class="text-gray-300">Naikkan level dengan aktif di server! Dan kalian akan melihat betapa menariknya sistem leveling dengan canvas yang keren.</p> 
+ 							</div> 
+ 						</div> 
+ 						<!-- Feature 2 --> 
+ 						 <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398667736107978899/Screenshot_6.png?ex=68863256&is=6884e0d6&hm=55ccc7bc773e08cfd31934fbe30d8a72d27b2e486a4ebb0254e4dabaa52e89d5&" alt="Fitur 2" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">Bot Musik 24/7 Dan Bot Musik Official</h3> 
+ 								<p class="text-gray-300">Selain bot music umum di server discord, kalian akan menemukan bot music official kami yaitu KIZA, nikmati alunan mendengarkan music dengan nyaman dan aman.</p> 
+ 							</div> 
+ 						</div> 
+ 						<!-- Feature 3 --> 
+ 						<div class="flex flex-col md:flex-row items-center gap-8 reveal"> 
+ 							<img src="https://cdn.discordapp.com/attachments/1398622193033674783/1398668995640561684/image.png?ex=68863382&is=6884e202&hm=636500fb0bff752d25f9a35607d5b103b77f4e978c6e96bca828096e407add65&" alt="Fitur 3" class="w-full md:w-1/2 rounded-lg shadow-lg"> 
+ 							<div class="md:w-1/2 text-left"> 
+ 								<h3 class="text-2xl font-bold text-[#DC743C] mb-2">System Bot Ekonomi Mata Uang Menggokil Cafe</h3> 
+ 								<p class="text-gray-300">Nikmati bermain bot ekonomi memakai bot official dari server menggokil cafe, dan dapatkan mata uang menggokil cafe dengan sangat banyak, kalian bisa menggunakan mata uang menggokil cafe dengan membeli role dan lain lainnya.</p> 
+ 							</div> 
+ 						</div> 
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			 <footer id="footer-features" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				<div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+
+ 		<!-- PAGE 5: Sponsorship --> 
+ 		<div id="page-container-sponsorship" class="page-container"> 
+ 			<section id="sponsorship" class="section"> 
+ 				 <div class="container mx-auto text-center max-w-5xl"> 
+ 					<h2 class="text-4xl font-bold mb-10 reveal">Daftar Sponsorship Menggokil Cafe</h2> 
+ 					<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center"> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 1" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">1</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP EVENTS</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.1s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 2" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">2</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP SERVER</div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.2s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 3" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">3</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP TOUR</p></div> 
+ 						<div class="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col items-center transform hover:scale-105 transition-transform reveal border border-gray-700" style="transition-delay: 0.3s;"><img src="https://placehold.co/128x128/1f2937/DC743C?text=CALON SPONSORSHIP 4" alt="Avatar Staf" class="w-32 h-32 rounded-lg mb-4 border-2 border-[#DC743C]"><h4 class="font-bold text-xl">4</h4><p class="bg-[#DC743C]/20 text-[#e89464] font-semibold px-3 py-1 rounded-full text-xs mt-2">SPONSORSHIP STAFF</p></div> 
+
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			 <footer id="footer-sponsorship" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				<div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+ 		
+ 		<!-- PAGE 6: CHAT WIDGET --> 
+ 		<div id="page-container-chat" class="page-container"> 
+ 			<section id="chat" class="section"> 
+ 				<div class="container mx-auto text-center w-full h-full flex flex-col items-center justify-center"> 
+ 					<h2 class="text-4xl font-bold mb-10 reveal">Live Chat Menggokil Cafe</h2> 
+ 					<div class="w-full max-w-4xl h-[70vh] rounded-lg overflow-hidden shadow-2xl reveal" style="transition-delay: 0.2s;"> 
+ 						<widgetbot 
+ 							server="835883386656522281" 
+ 							channel="868259034392854579" 
+ 							width="100%" 
+ 							height="100%" 
+ 							css="::-webkit-scrollbar { display: none; } body { scrollbar-width: none; }" 
+ 						></widgetbot> 
+ 					</div> 
+ 				</div> 
+ 			</section> 
+ 			 <footer id="footer-chat" class="page-footer w-full py-12 px-4 mt-auto"> 
+ 				<div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left"> 
+ 					<div class="md:col-span-1"> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">About Us</h3> 
+ 						<p class="text-gray-400 text-sm">Komunitas server discord indonesia yang menerima siapapun untuk join dan kalian akan menemukan hal hal unik di server kami.</p> 
+ 						<div class="flex justify-center md:justify-start gap-4 mt-4"> 
+ 							<a href="https://discord.gg/menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-discord"></i></a> 
+ 							<a href="https://www.tiktok.com/@menggokilcafe" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-tiktok"></i></a> 
+ 							<a href="https://www.instagram.com/menggokilcafe/" class="text-gray-400 hover:text-[#DC743C]"><i class="fab fa-instagram"></i></a> 
+ 						</div> 
+ 					</div> 
+ 					
+ 					
+ 					
+ 					<div> 
+ 						<h3 class="font-bold text-lg mb-4 uppercase tracking-wider">Get In Touch</h3> 
+ 						<ul class="space-y-2 text-sm"> 
+ 							<li class="text-gray-400">Email</li> 
+ 							<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrlGBDrWhVRsnMDTzRmpLMCfxhntTTGCDTJzTWfkDGDjbVqPXNLcCMztnPmWLkxRrcBLJV" class="text-gray-400 hover:text-[#DC743C]"><li class="text-white">menggokilcafe@gmail.com</li></a> 
+ 						</ul> 
+ 					</div> 
+ 				</div> 
+ 				<div class="text-center text-gray-500 text-sm mt-12 border-t border-gray-700 pt-6"> 
+ 					Copyright &copy; 2021. All rights reserved by <a href="https://discord.gg/menggokilcafe" class="text-white hover:text-[#DC743C]">MENGGOKIL OFFICIAL</a> 
+ 				</div> 
+ 			</footer> 
+ 		</div> 
+ 	</main> 
+
+ 	<!-- Back to Top Button --> 
+ 	<button id="back-to-top" title="Kembali ke atas"> 
+ 		<i class="fas fa-arrow-up"></i> 
+ 	</button> 
+
+ 	<script> 
+ 		document.addEventListener('DOMContentLoaded', function() { 
+ 			const preloader = document.getElementById('preloader'); 
+ 			
+ 			// --- Initial Page Load --- 
+ 			window.addEventListener('load', () => { 
+ 				setTimeout(() => { 
+ 					preloader.classList.add('hidden'); 
+ 				}, 500); 
+ 			}); 
+
+ 			// --- Custom Cursor Logic --- 
+ 			const cursorDot = document.querySelector('.cursor-dot'); 
+ 			const cursorOutline = document.querySelector('.cursor-outline'); 
+ 			window.addEventListener('mousemove', e => { 
+ 				const posX = e.clientX; 
+ 				const posY = e.clientY; 
+ 				cursorDot.style.left = `${posX}px`; 
+ 				cursorDot.style.top = `${posY}px`; 
+ 				cursorOutline.style.transform = `translate(${posX - 20}px, ${posY - 20}px)`; 
+ 			}); 
+ 			const interactiveElements = document.querySelectorAll('a, button, img, #title-link'); 
+ 			interactiveElements.forEach(el => { 
+ 				el.addEventListener('mouseover', () => cursorOutline.classList.add('cursor-hover')); 
+ 				el.addEventListener('mouseout', () => cursorOutline.classList.remove('cursor-hover')); 
+ 			}); 
+
+ 			// --- Navigation Logic --- 
+ 			const homeBtn = document.getElementById('home-btn'); 
+ 			const navToggleInfo = document.getElementById('nav-toggle-info'); 
+ 			const navMenuInfo = document.getElementById('nav-menu-info'); 
+ 			const navTogglePages = document.getElementById('nav-toggle-pages'); 
+ 			const navMenuPages = document.getElementById('nav-menu-pages'); 
+ 			const navToggleSocial = document.getElementById('nav-toggle-social'); 
+ 			const navMenuSocial = document.getElementById('nav-menu-social'); 
+ 			const titleLink = document.getElementById('title-link'); 
+
+ 			const pageLinks = document.querySelectorAll('.page-link'); 
+ 			const pageContainers = document.querySelectorAll('.page-container'); 
+ 			let observer; 
+
+ 			function setupPageObserver(containerId) { 
+ 				if (observer) { 
+ 					observer.disconnect(); 
+ 				} 
+
+ 				const container = document.getElementById(containerId); 
+ 				if (!container) return; 
+
+ 				const sections = container.querySelectorAll('.section'); 
+ 				container.querySelectorAll('.reveal').forEach(el => el.classList.remove('visible')); 
+
+ 				observer = new IntersectionObserver((entries) => { 
+ 					entries.forEach(entry => { 
+ 						if (entry.isIntersecting) { 
+ 							entry.target.querySelectorAll('.reveal').forEach(el => { 
+ 								el.classList.add('visible'); 
+ 								const counters = el.querySelectorAll('[data-target]'); 
+ 								counters.forEach(counter => { 
+ 									if (counter.innerText === '0' || counter.dataset.isCounting !== 'true') { 
+ 										counterUp(counter); 
+ 									} 
+ 								}); 
+ 							}); 
+ 						} 
+ 					}); 
+ 				}, { threshold: 0.1 }); 
+
+ 				sections.forEach(section => observer.observe(section)); 
+
+ 				const firstSection = container.querySelector('.section'); 
+ 				if (firstSection) { 
+ 					setTimeout(() => { 
+ 						firstSection.querySelectorAll('.reveal').forEach(el => { 
+ 							el.classList.add('visible'); 
+ 							const counters = el.querySelectorAll('[data-target]'); 
+ 							counters.forEach(counter => { 
+ 								 if (counter.innerText === '0' || counter.dataset.isCounting !== 'true') { 
+ 									counterUp(counter); 
+ 								} 
+ 							}); 
+ 						}); 
+ 					}, 100); 
+ 				} 
+ 			} 
+
+ 			function switchToPage(targetId) { 
+ 				const targetContainer = document.getElementById(targetId); 
+
+ 				if (!targetContainer || targetContainer.classList.contains('active')) { 
+ 					return; 
+ 				} 
+ 				
+ 				preloader.classList.remove('hidden'); 
+
+ 				setTimeout(() => { 
+ 					pageContainers.forEach(pc => pc.classList.remove('active')); 
+ 					targetContainer.classList.add('active'); 
+
+ 					// Manage active states for links in dropdowns 
+ 					pageLinks.forEach(l => l.classList.remove('active')); 
+ 					const activeLink = document.querySelector(`.page-link[data-target="${targetId}"]`); 
+ 					if(activeLink) { 
+ 						activeLink.classList.add('active'); 
+ 					} 
+ 					
+ 					// Handle body scroll for chat page 
+ 					if (targetId === 'page-container-chat') { 
+ 						document.body.style.overflowY = 'hidden'; 
+ 					} else { 
+ 						document.body.style.overflowY = 'auto'; 
+ 					} 
+ 					
+ 					window.scrollTo(0,0); 
+ 					setupPageObserver(targetId); 
+
+ 					// Typing effect for home page 
+ 					const typingTarget = document.getElementById('typing-text'); 
+ 					if (targetId === 'page-container-main' && typingTarget) { 
+ 						 typeWriter(typingTarget, 'MENGGOKIL CAFE'); 
+ 					} 
+ 					
+ 					preloader.classList.add('hidden'); 
+ 				}, 800); 
+ 			} 
+ 			
+ 			homeBtn.addEventListener('click', (e) => { 
+ 				e.preventDefault(); 
+ 				switchToPage('page-container-main'); 
+ 			}); 
+
+ 			// --- CLICK-BASED DROPDOWN LOGIC --- 
+ 			function toggleDropdown(toggle, menu) { 
+ 				const isHidden = menu.classList.contains('hidden'); 
+ 				// Close all menus first 
+ 				navMenuInfo.classList.add('hidden'); 
+ 				navMenuPages.classList.add('hidden'); 
+ 				navMenuSocial.classList.add('hidden'); 
+ 				navToggleInfo.querySelector('i').classList.remove('rotate-180'); 
+ 				navTogglePages.querySelector('i').classList.remove('rotate-180'); 
+ 				navToggleSocial.querySelector('i').classList.remove('rotate-180'); 
+
+ 				// If the clicked menu was hidden, show it 
+ 				if (isHidden) { 
+ 					menu.classList.remove('hidden'); 
+ 					toggle.querySelector('i').classList.add('rotate-180'); 
+ 				} 
+ 			} 
+
+ 			navToggleInfo.addEventListener('click', (e) => { 
+ 				e.stopPropagation(); 
+ 				toggleDropdown(navToggleInfo, navMenuInfo); 
+ 			}); 
+ 			
+ 			navTogglePages.addEventListener('click', (e) => { 
+ 				e.stopPropagation(); 
+ 				toggleDropdown(navTogglePages, navMenuPages); 
+ 			}); 
+
+ 			navToggleSocial.addEventListener('click', (e) => { 
+ 				e.stopPropagation(); 
+ 				toggleDropdown(navToggleSocial, navMenuSocial); 
+ 			}); 
+ 			
+ 			pageLinks.forEach(link => { 
+ 				link.addEventListener('click', e => { 
+ 					e.preventDefault(); 
+ 					const targetId = link.dataset.target; 
+ 					switchToPage(targetId); 
+ 				}); 
+ 			}); 
+
+ 			titleLink.addEventListener('click', (e) => { 
+ 				e.preventDefault(); 
+ 				switchToPage('page-container-main'); 
+ 			}); 
+
+ 			// Close dropdown when clicking anywhere else on the page 
+ 			window.addEventListener('click', () => { 
+ 				if (!navMenuInfo.classList.contains('hidden')) { 
+ 					toggleDropdown(navToggleInfo, navMenuInfo); 
+ 				} 
+ 				 if (!navMenuPages.classList.contains('hidden')) { 
+ 					toggleDropdown(navTogglePages, navMenuPages); 
+ 				} 
+ 				if (!navMenuSocial.classList.contains('hidden')) { 
+ 					toggleDropdown(navToggleSocial, navMenuSocial); 
+ 				} 
+ 			}); 
+
+
+ 			// --- Back to Top & Scroll Logic --- 
+ 			const backToTopButton = document.getElementById('back-to-top'); 
+ 			
+ 			backToTopButton.addEventListener('click', (e) => { 
+ 				e.preventDefault(); 
+ 				window.scrollTo({ top: 0, behavior: 'smooth' }); 
+ 			}); 
+
+ 			window.addEventListener('scroll', () => { 
+ 				if (window.scrollY > 300) { 
+ 					backToTopButton.classList.add('show'); 
+ 				} else { 
+ 					backToTopButton.classList.remove('show'); 
+ 				} 
+ 			}); 
+
+ 			// --- Counter Up & Typing Animation --- 
+ 			const counterUp = (el) => { 
+ 				el.dataset.isCounting = 'true'; 
+ 				const target = parseInt(el.getAttribute('data-target'), 10); 
+ 				if(isNaN(target)) return; 
+ 				let current = 0; 
+ 				const duration = 1500; 
+ 				const stepTime = 20; 
+ 				const totalSteps = duration / stepTime; 
+ 				const increment = target / totalSteps; 
+ 				const updateCounter = () => { 
+ 					current += increment; 
+ 					if (current < target) { 
+ 						el.innerText = Math.ceil(current); 
+ 						setTimeout(updateCounter, stepTime); 
+ 					} else { 
+ 						el.innerText = target; 
+ 						el.dataset.isCounting = 'false'; 
+ 					} 
+ 				}; 
+ 				updateCounter(); 
+ 			}; 
+
+ 			function typeWriter(element, text, speed = 150) { 
+ 				let i = 0; 
+ 				element.innerHTML = ''; // Clear previous text 
+ 				element.dataset.typing = 'true'; // Set typing flag 
+
+ 				function type() { 
+ 					if (i < text.length) { 
+ 						element.innerHTML += text.charAt(i); 
+ 						i++; 
+ 						setTimeout(type, speed); 
+ 					} else { 
+ 						element.dataset.typing = 'false'; // Unset flag 
+ 					} 
+ 				} 
+ 				type(); 
+ 			} 
+ 			
+ 			// Initial setup 
+ 			setupPageObserver('page-container-main'); 
+ 			const initialTypingTarget = document.getElementById('typing-text'); 
+ 			if(initialTypingTarget) { 
+ 				typeWriter(initialTypingTarget, 'MENGGOKIL CAFE'); 
+ 			} 
+ 		}); 
+ 	</script> 
+ </body> 
+ </html>
